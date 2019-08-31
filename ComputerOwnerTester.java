@@ -8,15 +8,15 @@ public class ComputerOwnerTester {
 		Person Guy1 = new Person("Jeff", "Diamonds", "123948745", new DateAndPlaceOfBirth(1982, 4, 5, "Atlantic City", "New Jersey", "United States"), new StreetUSAddress("40-53 Dowry Lane", "", "Atlantic City", "NJ", "12112"));
 		
 		ComputerOwner compOwner = new ComputerOwner(Guy1);
-		Computer file1 = new Computer("MSI", "Apache", 16, 500, true, 800.00);
-		Computer file2 = new Computer("Microsoft", "Go", 8, 1100, false, 500.00);
-		Computer file3 = new Computer("MSI", "GL63", 16, 2000, true, 1500.00);
-		Computer file4 = new Computer("Apple", "Touch", 16, 300, false, 3000.00);
+		Computer computer1 = new Computer("MSI", "Apache", 16, 500, true, 800.00);
+		Computer computer2 = new Computer("Microsoft", "Go", 8, 1100, false, 500.00);
+		Computer computer3 = new Computer("MSI", "GL63", 16, 2000, true, 1500.00);
+		Computer computer4 = new Computer("Apple", "Touch", 16, 300, false, 3000.00);
 
-		compOwner.addComputer(file1);
-		compOwner.addComputer(file2);
-		compOwner.addComputer(file3);
-		compOwner.addComputer(file4);
+		compOwner.addComputer(computer1);
+		compOwner.addComputer(computer2);
+		compOwner.addComputer(computer3);
+		compOwner.addComputer(computer4);
 		System.out.println(compOwner);
 		
 		compOwner.removeComputer(2);
@@ -30,15 +30,15 @@ public class ComputerOwnerTester {
 		Person Guy12 = new Person("Jeff", "Diamonds", "123948745", new DateAndPlaceOfBirth(1982, 4, 5, "Atlantic City", "New Jersey", "United States"), new StreetUSAddress("40-53 Dowry Lane", "", "Atlantic City", "NJ", "12112"));
 		
 		ComputerOwner compOwner2 = new ComputerOwner(Guy1);
-		Computer file12 = new Computer("MSI", "Apache", 16, 500, true, 800.00);
-		Computer file22 = new Computer("Microsoft", "Go", 8, 1100, false, 500.00);
-		Computer file32 = new Computer("MSI", "GL63", 16, 2000, true, 1500.00);
-		Computer file42 = new Computer("Apple", "Touch", 16, 300, false, 3000.00);
+		Computer computer12 = new Computer("MSI", "Apache", 16, 500, true, 800.00);
+		Computer computer22 = new Computer("Microsoft", "Go", 8, 1100, false, 500.00);
+		Computer computer32 = new Computer("MSI", "GL63", 16, 2000, true, 1500.00);
+		Computer computer42 = new Computer("Apple", "Touch", 16, 300, false, 3000.00);
 
-		compOwner2.addComputer(file12);
-		compOwner2.addComputer(file22);
-		compOwner2.addComputer(file32);
-		compOwner2.addComputer(file42);
+		compOwner2.addComputer(computer12);
+		compOwner2.addComputer(computer22);
+		compOwner2.addComputer(computer32);
+		compOwner2.addComputer(computer42);
 		System.out.println(compOwner2);
 		
 		compOwner2.removeComputer(2);
