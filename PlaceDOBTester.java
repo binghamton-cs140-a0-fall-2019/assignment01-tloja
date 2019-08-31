@@ -1,62 +1,91 @@
-package assignment 01;
+package assignment01;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.Printwriter;
+import java.io.PrintWriter;
 public class PlaceDOBTester {
-	public static void main(String[] args){
-	DateAndPlaceOfBirth object1 = new DateAndPlaceOfBirth(1999,4,1,"Austin","Texas","USA");
-	DateAndPlaceOfBirth object2 = new DateAndPlaceOfBirth(1999,4,1,"Cleveland","Ohio","USA");
-	DateAndPlaceOfBirth object3 = new DateAndPlaceOfBirth(2000,4,1,"Las Vegas","Nevada","USA");
-	DateAndPlaceOfBirth object4 = new DateAndPlaceOfBirth(2013,3,1,"Paris","France");
-	DateAndPlaceOfBirth object5 = new DateAndPlaceOfBirth(2003,6,4,"Stockholm","Sweden");
-	System.out.println(object1);
-	System.out.println(object2);
-	System.out.println(object3);
-	System.out.println(object4);
-	System.out.println(object5);
-	
-	System.out.println(object1.hasSameBirthDayAs(object2);
-	System.out.println("ABOVE SHOULD BE TRUE");
-	System.out.println(object2.hasSameBirthDateAs(object3);
-	System.out.println("ABOVE SHOULD BE TRUE");
-	System.out.println(object1.olderThan(object2);
-	System.out.println("ABOVE SHOULD BE TRUE");
-	System.out.println(object2.youngerThan(object1);
-	System.out.println("ABOVE SHOULD BE TRUE");
-	
+	public static void main(String[] args) {
+		DateAndPlaceOfBirth birth1 = new DateAndPlaceOfBirth(2000, 8, 02, "Bellport", "New York", "USA");
+		System.out.println(birth1);
+		DateAndPlaceOfBirth birth2 = new DateAndPlaceOfBirth(2000, 8, 02, "Binghamton", "New York", "USA");
+		System.out.println(birth2);
+		DateAndPlaceOfBirth birth3 = new DateAndPlaceOfBirth(2002, 8, 02, "Albany", "New York", "USA");
+		System.out.println(birth3);
+		DateAndPlaceOfBirth birth4 = new DateAndPlaceOfBirth(2000, 7, 03, "Berlin",  "Germany");
+		System.out.println(birth4);
+		DateAndPlaceOfBirth birth5 = new DateAndPlaceOfBirth(2000, 8, 21, "London",  "England");
+		System.out.println(birth5);
 
+	System.out.println(birth1.olderThan(birth3));
+	System.out.println("Above should be true");
+	System.out.println(birth3.youngerThan(birth1));
+	System.out.println("Above should be true");
+	
+		try(var output =new PrintWriter(new FileOutputStream(
+			    new File("output.txt"), true /* true means append to file */))) {
+			output.println("\nTESTS FOR DateAndPlaceOfBirth.java:");
+			DateAndPlaceOfBirth birth12 = new DateAndPlaceOfBirth(2000, 8, 02, "Bellport", "New York", "USA");
+			output.println(birth12);
+			DateAndPlaceOfBirth birth22 = new DateAndPlaceOfBirth(2000, 8, 02, "Binghamton", "New York", "USA");
+			output.println(birth22);
+			DateAndPlaceOfBirth birth32 = new DateAndPlaceOfBirth(2002, 8, 02, "Albany", "New York", "USA");
+			output.println(birth32);
+			DateAndPlaceOfBirth birth42 = new DateAndPlaceOfBirth(2000, 7, 03, "Berlin",  "Germany");
+			output.println(birth42);
+			DateAndPlaceOfBirth birth52 = new DateAndPlaceOfBirth(2000, 8, 21, "London",  "England");
+			output.println(birth52);
+System.out.println(birth1.hasSameBirthDayAs(birth2));
+System.out.println("Above should be true");	
+System.out.println(birth1.hasSameBirthDayAs(birth3));	
+System.out.println("Above should be true");
+System.out.println(birth1.hasSameBirthDayAs(birth4));
+System.out.println("Above should be false");	
+System.out.println(birth1.hasSameBirthDayAs(birth5));	
+System.out.println("Above should be false");
+System.out.println(birth2.hasSameBirthDayAs(birth3));
+System.out.println("Above should be true");	
+System.out.println(birth2.hasSameBirthDayAs(birth4));	
+System.out.println("Above should be false");
+System.out.println(birth2.hasSameBirthDayAs(birth5));	
+System.out.println("Above should be false");
+System.out.println(birth3.hasSameBirthDayAs(birth4));	
+System.out.println("Above should be false");
+System.out.println(birth3.hasSameBirthDayAs(birth5));
+System.out.println("Above should be false");
+System.out.println(birth4.hasSameBirthDayAs(birth5));	
+System.out.println("Above should be false");
 
-
+output.println(birth12.hasSameBirthDayAs(birth22));
+output.println("Above should be true");	
+output.println(birth12.hasSameBirthDayAs(birth32));	
+output.println("Above should be true");
+output.println(birth12.hasSameBirthDayAs(birth42));
+output.println("Above should be false");	
+output.println(birth12.hasSameBirthDayAs(birth52));	
+output.println("Above should be false");
+output.println(birth22.hasSameBirthDayAs(birth32));
+output.println("Above should be true");	
+output.println(birth22.hasSameBirthDayAs(birth42));	
+output.println("Above should be false");
+output.println(birth22.hasSameBirthDayAs(birth52));	
+output.println("Above should be false");
+output.println(birth32.hasSameBirthDayAs(birth42));	
+output.println("Above should be false");
+output.println(birth32.hasSameBirthDayAs(birth52));
+output.println("Above should be false");
+output.println(birth42.hasSameBirthDayAs(birth52));	
+output.println("Above should be false");
 	
-	try(var output  =new PrintWriter(new FileOutputStream(
-		new File("output.txt"), true /* true means append to file */ ))){
-		output.println("\nTESTS FOR DateAndPlaceOfBirth.java:");
-	
-	DateAndPlaceOfBirth object12 = new DateAndPlaceOfBirth(1999,4,1,"Austin","Texas","USA");
-	DateAndPlaceOfBirth object22 = new DateAndPlaceOfBirth(1999,4,1,"Cleveland","Ohio","USA");
-	DateAndPlaceOfBirth object32 = new DateAndPlaceOfBirth(2000,4,1,"Las Vegas","Nevada","USA");
-	DateAndPlaceOfBirth object42 = new DateAndPlaceOfBirth(2013,3,1,"Paris","France");
-	DateAndPlaceOfBirth object52 = new DateAndPlaceOfBirth(2003,6,4,"Stockholm","Sweden");
-	output.println(object12);
-	output.println(object22);
-	output.println(object32);
-	output.println(object42);
-	output.println(object52);
-	
-	output.println(object12.hasSameBirthDayAs(object22);
+	output.println(birth12.olderThan(birth32));
 	output.println("ABOVE SHOULD BE TRUE");
-	output.println(object22.hasSameBirthDateAs(object32);
-	output.println("ABOVE SHOULD BE TRUE");
-	output.println(object12.olderThan(object22);
-	output.println("ABOVE SHOULD BE TRUE");
-	output.println(object22.youngerThan(object12);
+	output.println(birth32.youngerThan(birth12));
 	output.println("ABOVE SHOULD BE TRUE");
 
-
-
-	} catch (FileNotFoundException e) {
-		e.printStackTrace();
-		}	
+		//Copy all your lines above, add an extra "2" to every variable name
+		// and replace every System.out.print or System.out.println
+		// by output.print or output.println
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
 	}
 }
