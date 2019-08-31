@@ -73,11 +73,10 @@ public class Person {
 
 
 	public String toString() {
-		System.out.println( firstNames + lastNames + ssn + "\n" + "Date and place of birth: " + placeDob);
-		System.out.print(address);
-		return firstNames + lastNames + ssn + "\n" + "Date and place of birth: " + placeDob + "\n" + address;
+		
+		return firstNames + " " + lastNames + "\n" + ssn + "\n"  + placeDob + "\n" + address;
 	}
 // TODO provide the getter methods for placeDob and address
 // TODO Override the public String toString() method that is similar to the
-// toString of the StreetUSAddress class and will print a person as:
 
+}
