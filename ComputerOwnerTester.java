@@ -5,7 +5,7 @@ import java.io.FileOutputStream;
 import java.io.PrintWriter;
 public class ComputerOwnerTester {
 	public static void main(String[] args) {
-		Person Guy1 = new Person("Jeff", "Diamonds", "123948745", new DateAndPlaceOfBirth(1982, 4, 5, "Atlantic City", "New Jersey", "United States"), new StreetUSAddress("40-53 Dowry Lane", "", "Atlantic City", "NJ", "12112"));
+		Person Guy1 = new Person("Dan", "Harvey", "123948745", new DateAndPlaceOfBirth(1982, 4, 5, "Atlantic City", "New Jersey", "United States"), new StreetUSAddress("40-53 Dowry Lane", "", "Atlantic City", "NJ", "12112"));
 		
 		ComputerOwner compOwner = new ComputerOwner(Guy1);
 		Computer computer1 = new Computer("Dell", "Destroyer", 16, 500, true, 800.00);
@@ -27,7 +27,7 @@ public class ComputerOwnerTester {
 			    new File("output.txt"), true /* true means append to file */))) {
 			output.println("\nTESTS FOR ComputerOwner.java:");
 		
-		Person Guy12 = new Person("Jeff", "Diamonds", "123948745", new DateAndPlaceOfBirth(1982, 4, 5, "Atlantic City", "New Jersey", "United States"), new StreetUSAddress("40-53 Dowry Lane", "", "Atlantic City", "NJ", "12112"));
+		Person Guy12 = new Person("Dan", "Harvey", "123948745", new DateAndPlaceOfBirth(1982, 4, 5, "Atlantic City", "New Jersey", "United States"), new StreetUSAddress("40-53 Dowry Lane", "", "Atlantic City", "NJ", "12112"));
 		
 		ComputerOwner compOwner2 = new ComputerOwner(Guy1);
 		Computer computer12 = new Computer("Dell", "Destroyer", 16, 500, true, 800.00);
